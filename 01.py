@@ -1,4 +1,4 @@
-def main():
+def calculadora():
     print("Calculadora \n")
     print("Escolha a operação:")
     print("1 - para Adição (+)")
@@ -16,18 +16,25 @@ def main():
     if escolha == '1':
         resultado = numero1 + numero2
         print(f"Resultado: {numero1} + {numero2} = {resultado}")
-    if escolha == '2':
+    elif escolha == '2':
         resultado = numero1 - numero2
         print(f"Resultado: {numero1} - {numero2} = {resultado}")
-    if escolha == '3':
+    elif escolha == '3':
         resultado = numero1 * numero2
         print(f"Resultado: {numero1} * {numero2} = {resultado}")
-    if escolha == '4':
+    elif escolha == '4':
         if numero2 != 0:
             resultado = numero1 / numero2
             print(f"Resultado: {numero1} / {numero2} = {resultado}")
-        else:
-            print("Erro: Divisão por zero!")
-            
-if __name__ == "__main__":
-    main()
+    else:
+        print("Erro: ao escolher a operação!")
+
+while True:
+    calculadora()
+    resultado = input("Deseja realizar mais alguma operação sim - s| não - n").lower()
+    if resultado  == "s":
+        calculadora()
+    else:
+        break
+        
+    
